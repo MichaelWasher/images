@@ -1,4 +1,4 @@
-FROM fedora:32
+FROM quay.io/support-tools/fedora:32
 
 RUN dnf install -y \
   strace \
