@@ -1,18 +1,28 @@
-FROM fedora:32
+FROM fedora:32 
 
-RUN dnf install -y \
-  strace \
+RUN dnf install -y  \
   bind-utils \
+  conntrack-tools \
+  ethtool \
+  hostname \
   httpie \
-  mtr \
+  iperf3 \
   iproute \
-  tcpdump \
-  rsync \
-  wireshark-cli \
+  iproute \
+  mtr \
+  net-tools \
+  numactl \
   procps-ng \
+  procps-ng \
+  psmisc \
+  rsync \
+  strace \
+  sysstat \
   tar \
-  iperf3 && \
-  dnf clean all 
+  tcpdump \
+  util-linux \
+  wireshark-cli \
+  &&  \
+  dnf clean all  
 
 ENTRYPOINT trap : TERM INT; sleep infinity & wait # Listen for kill signals and exit quickly.
-
