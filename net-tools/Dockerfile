@@ -1,10 +1,11 @@
-FROM fedora:32
+FROM fedora:38
 
 RUN dnf install -y \
   strace \
   bind-utils \
   httpie \
   mtr \
+  traceroute \
   iproute \
   tcpdump \
   rsync \
